@@ -1,11 +1,9 @@
 int x, y;
-int  k;
 
 void setup() {
-  size(640, 350);
+  size(640, 325);
   x = 0;
   y = 0;
-  k= 35;
 }
 
 void draw() {
@@ -25,14 +23,18 @@ void draw() {
   rect(0, 0, 250, 175);
   fill(255);
   noStroke();
-
-  for (int i = 0; i < 50; i++) {
-    x= k+35;
-  
-    if(k<200){
-    putStar(x, y+10);}
-   
+ for (int i = 0; i < 9; i++) {
+  for (int k = 0; k < 6; k++) {
+    
+          x=20;
+          x=x+k*40;
+          putStar(x,y);
+       
   }
+  y+=19;
+ }
+  x=0;
+  y=10;
 }
 
 void putStar(int x, int y) {
@@ -46,7 +48,11 @@ void putStar(int x, int y) {
 
 
 
+
+
+
 void star() {
+  scale(0.5);
   beginShape();
   vertex(0, -50);
   vertex(14, -20);
