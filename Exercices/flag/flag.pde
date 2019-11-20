@@ -12,27 +12,33 @@ void draw() {
 
   for (int i = 0; i < 14; i++) {
     if (i % 2 == 0) {
-      fill(255, 0, 0);
+      fill(178, 34, 52);
       rect(0, i*25, width, 25);
     } else {
       fill(255, 255, 255);
       rect(0, i*25, width, 25);
     }
   }
-  fill(0,0,255);
+  fill(60, 59, 110);
   rect(0, 0, 250, 175);
   fill(255);
   noStroke();
- for (int i = 0; i < 9; i++) {
-  for (int k = 0; k < 6; k++) {
-    
-          x=20;
-          x=x+k*40;
-          putStar(x,y);
-       
+  for (int i = 0; i < 9; i++) {
+    if (i % 2 == 0) { 
+      for (int k = 0; k < 6; k++) {
+        x=20;
+        x=x+k*40;
+        putStar(x, y);
+      }
+    } else {
+      for (int k = 0; k < 5; k++) {
+        x=40;
+        x=x+k*40;
+        putStar(x, y);
+      }
+    }
+    y+=19;
   }
-  y+=19;
- }
   x=0;
   y=10;
 }
@@ -52,7 +58,7 @@ void putStar(int x, int y) {
 
 
 void star() {
-  scale(0.5);
+  scale(0.55);
   beginShape();
   vertex(0, -50);
   vertex(14, -20);
